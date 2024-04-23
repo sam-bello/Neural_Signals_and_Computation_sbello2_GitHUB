@@ -16,3 +16,8 @@ implay(frames)
 corr14 = normxcorr2(frames(:,:,:,1),frames(:,:,:,4));
 padding = (length(frames(:,:,:,1)) - 1) / 2 + 1;
 corr14 = corr14(padding:end - padding + 1,padding:end - padding + 1);
+
+% plot correlation
+figure()
+imshow(corr14)
+title("Correlation between Frames 1 and 4")
